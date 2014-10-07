@@ -1,0 +1,54 @@
+apply plugin: 'android'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion '19.1.0'
+    defaultConfig {
+        packageName 'com.ErNicoSystem.megalinterna.linterna'
+        minSdkVersion 9
+        targetSdkVersion 19
+        versionCode 2
+        versionName '1.0'
+
+
+        signingConfigs {
+            debug {
+                
+            }
+
+
+            release {
+               
+            }
+        }
+    }
+    buildTypes {
+        debug {
+            debuggable true
+            jniDebugBuild false
+            signingConfig signingConfigs.debug
+        }
+        release {
+            debuggable false
+            jniDebugBuild false
+            signingConfig signingConfigs.release
+        }
+    }
+//        release {
+//            runProguard false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//        }
+    productFlavors {
+    }
+}
+
+
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:19.+'
+    compile 'com.android.support:appcompat-v7:19.+'
+    compile 'com.android.support:support-v4:19.+'
+    compile 'com.google.android.gms:play-services:4.3.23'
+}
